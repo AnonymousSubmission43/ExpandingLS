@@ -31,20 +31,10 @@ https://drive.google.com/drive/folders/1_P_jnP3ZyTlVR2RX1NjvA2Gy2sRWaJlw?usp=sha
 
 #### **Training**
 ```
-python scripts/train_pdsp_single_branch.py \
+CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 scripts/train_pdsp_single_branch.py \
 --dataset_type=ffhq_encode \
 --exp_dir=/path/to/experiment \
---workers=8 \
---batch_size=8 \
---test_batch_size=8 \
---test_workers=8 \
---val_interval=2500 \
---save_interval=5000 \
---encoder_type=GradualStyleEncoder \
---start_from_latent_avg \
---lpips_lambda=0.8 \
---l2_lambda=1 \
---id_lambda=0.1
+--start_from_latent_avg 
 ```
 
 #### **Training**
