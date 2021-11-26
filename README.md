@@ -24,12 +24,12 @@ dataset_paths = {
 }
 ```
 
-#### **Pretrained Models**\
-Please download all the pretrained model, and put it in the folder of '../pretrained_models'.
-https://drive.google.com/drive/folders/1_P_jnP3ZyTlVR2RX1NjvA2Gy2sRWaJlw?usp=sharing
+
+### Pretrained Models
+Please download all the pretrained models from [here](https://drive.google.com/drive/folders/1_P_jnP3ZyTlVR2RX1NjvA2Gy2sRWaJlw?usp=sharing), and put it in the folder of '../pretrained_models'.
 
 
-#### **Training**
+### Train
 ```
 CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 scripts/train_pdsp_single_branch.py \
 --dataset_type=ffhq_encode \
@@ -37,7 +37,8 @@ CUDA_VISIBLE_DEVICES=0,1 python -m torch.distributed.launch --nproc_per_node=2 s
 --start_from_latent_avg 
 ```
 
-#### **Training**
+
+### Test
 ```
 python scripts/edit_pdsp_styleGAN_single_branch.py \
 --exp_path=../experiments/test \
