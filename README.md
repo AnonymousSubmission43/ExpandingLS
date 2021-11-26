@@ -3,22 +3,20 @@
 ### Installation
 - Clone this repo:
 ``` 
-git clone https://github.com/eladrich/pixel2style2pixel.git
-cd pixel2style2pixel
+git clone https://github.com/AnonymousSubmission43/ExpandingLS.git
+cd ExpandingLS
 ```
 - Dependencies:
 We recommend running this repository using [Anaconda](https://docs.anaconda.com/anaconda/install/).
-All dependencies for defining the environment are provided in `environment/psp_env.yaml`.
+All dependencies for defining the environment are provided in `environment/py3pt160.yaml`.
 
 
 ### Preparing your Data
-- Currently, we provide support for numerous datasets and experiments (encoding, frontalization, etc.).
+- Currently, we provide support for CelebA-HQ and FFHQ datasets.
     - Refer to `configs/paths_config.py` to define the necessary data paths and model paths for training and evaluation.
-    - Refer to `configs/transforms_config.py` for the transforms defined for each dataset/experiment.
-    - Finally, refer to `configs/data_configs.py` for the source/target data paths for the train and test sets
+    - Refer to `configs/data_configs.py` for the source/target data paths for the train and test sets
       as well as the transforms.
-As an example, assume we wish to run encoding using ffhq (`dataset_type=ffhq_encode`).
-We first go to `configs/paths_config.py` and define:
+For example, we first go to `configs/paths_config.py` and define:
 ``` 
 dataset_paths = {
     'ffhq': '/path/to/ffhq/images256x256'
@@ -26,8 +24,8 @@ dataset_paths = {
 }
 ```
 
-
-#### **Pretrained Models**
+#### **Pretrained Models**\
+Please download all the pretrained model, and put it in the folder of '../pretrained_models'.
 https://drive.google.com/drive/folders/1_P_jnP3ZyTlVR2RX1NjvA2Gy2sRWaJlw?usp=sharing
 
 
